@@ -10,7 +10,7 @@ export interface Card {
 }
 
 router.get<{}, Card[]>("/", (req, res) => {
-  res.send(cardsData);
+  res.json(cardsData);
 });
 
 export default router;
