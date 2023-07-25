@@ -1,6 +1,6 @@
 import { Card } from "../api/cards";
 
-export let cardsData: Card[] = [
+export const cardsData: Card[] = [
   {
     id: 1,
     content: "Mały Maciek powiedział twoja stara sra do gara",

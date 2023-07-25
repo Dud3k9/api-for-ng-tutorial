@@ -8,12 +8,14 @@ export interface Card {
   person: string;
   id?: number;
 }
+let cards: Card[] = [...cardsData];
 
 router.get<{}, Card[]>("/", (req, res) => {
-  res.json(cardsData);
+  res.json(cards);
 });
+
 router.post<Card, any>("/", (req, res) => {
-  const ids: number[] = cardsData.map((x) => x.id) as number[];
+  const ids: number[] = cards.map((x) => x.id) as number[];
   let newId = Math.max(...ids) + 1;
 
   let newCard: Card = {
@@ -27,9 +29,15 @@ router.post<Card, any>("/", (req, res) => {
     return;
   }
 
-  cardsData.push(newCard);
+  cards.push(newCard);
 
   res.json(newId);
+});
+
+router.get<Card, any>("/reset", (req, res) => {
+  cards = [...cardsData];
+
+  res.json("ok");
 });
 
 export default router;
