@@ -8,17 +8,12 @@ export const cardsData: Card[] = [
   },
   {
     id: 2,
-    content: "Mały Maciek powiedział twoja stara sra do gara",
+    content: "Mały Maciek piłuje mordę na openspace",
     person: "Mały Maciek",
   },
   {
     id: 3,
-    content: "Mały Maciek powiedział twoja stara sra do gara",
-    person: "Mały Maciek",
-  },
-  {
-    id: 4,
-    content: "Mały Maciek powiedział twoja stara sra do gara",
+    content: "Mały Maciek nadupca ręką w biurko",
     person: "Mały Maciek",
   },
 ];
